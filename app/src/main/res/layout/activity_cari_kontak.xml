@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cari_kontak">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/form_cari"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:textSize="12dp"
+                android:background="@drawable/background_cari"
+                android:drawableLeft="@drawable/baseline_search_24"
+                android:hint="Cari kontak..."
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+            <Button
+                android:id="@+id/reset"
+                android:layout_marginLeft="-40dp"
+                android:background="@drawable/close"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+            <Button
+                android:id="@+id/keluar"
+                android:textColor="#03A9F4"
+                android:textAllCaps="false"
+                android:background="#0003A9F4"
+                android:text="Batal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/list_cari"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
+
