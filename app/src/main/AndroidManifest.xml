@@ -23,11 +23,6 @@
             android:name=".detail_kontak"
             android:exported="false" />
         <activity
-            android:name=".lihat_kontak"
-            android:exported="false"
-            android:label="@string/title_activity_lihat_kontak"
-            android:theme="@style/Theme.Aplikasi_Kontak.NoActionBar" />
-        <activity
             android:name=".cari_kontak"
             android:exported="false" />
         <activity
