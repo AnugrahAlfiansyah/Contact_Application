@@ -75,7 +75,7 @@ public class cari_kontak extends AppCompatActivity {
 
     void cari_data(String data)
     {
-        String url="http://192.168.1.5/kontak/cari.php?q="+data;
+        String url="http://172.125.1.179/kontak/cari.php?q="+data;
         StringRequest request=new StringRequest(
                 Request.Method.GET,
                 url,

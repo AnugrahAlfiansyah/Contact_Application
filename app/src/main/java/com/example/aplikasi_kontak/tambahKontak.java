@@ -55,7 +55,7 @@ public class tambahKontak extends AppCompatActivity {
     }
 
     void simpan_data(){
-        String url="http://192.168.1.5/kontak/simpan_kontak.php";
+        String url="http://172.125.1.179/kontak/simpan_kontak.php";
         StringRequest request = new StringRequest(
                 Request.Method.POST,
                 url,

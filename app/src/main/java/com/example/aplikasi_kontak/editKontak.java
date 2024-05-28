@@ -56,7 +56,7 @@ public class editKontak extends AppCompatActivity {
     }
 
     void edit_data(){
-        String url = "http://192.168.1.5/kontak/update_data.php?id_kontak="+getIntent().getStringExtra("id_kontak");
+        String url = "http://172.125.1.179/kontak/update_data.php?id_kontak="+getIntent().getStringExtra("id_kontak");
         StringRequest request = new StringRequest(
                 Request.Method.POST,
                 url,
@@ -101,7 +101,7 @@ public class editKontak extends AppCompatActivity {
     }
 
     void tampil_data(){
-        String url = "http://192.168.1.5/kontak/tampil_data.php?id_kontak="+getIntent().getStringExtra("id_kontak");
+        String url = "http://172.125.1.179/kontak/tampil_data.php?id_kontak="+getIntent().getStringExtra("id_kontak");
         StringRequest request = new StringRequest(
                 Request.Method.GET,
                 url,

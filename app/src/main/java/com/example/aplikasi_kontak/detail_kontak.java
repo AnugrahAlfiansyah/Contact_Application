@@ -24,7 +24,7 @@ import java.util.ArrayList;
 public class detail_kontak extends AppCompatActivity {
 
     TextView namal, namap, nohp, alamat;
-    Button hapus, edit;
+    Button hapus, edit, keluar;
     ArrayList<listKontak> model;
 
     @Override
@@ -37,6 +37,7 @@ public class detail_kontak extends AppCompatActivity {
         alamat = findViewById(R.id.alamaT);
         hapus = findViewById(R.id.btn_hapus);
         edit = findViewById(R.id.btn_edit);
+        keluar = findViewById(R.id.btn_keluar);
 
         hapus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,11 +56,18 @@ public class detail_kontak extends AppCompatActivity {
             }
         });
 
+        keluar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         tampil_data();
     }
 
     void tampil_data(){
-        String url = "http://192.168.1.5/kontak/tampil_data.php?id_kontak="+getIntent().getStringExtra("id_kontak");
+        String url = "http://172.125.1.179/kontak/tampil_data.php?id_kontak="+getIntent().getStringExtra("id_kontak");
         StringRequest request = new StringRequest(
                 Request.Method.GET,
                 url,
@@ -89,7 +97,7 @@ public class detail_kontak extends AppCompatActivity {
     }
 
     void hapus_data(){
-        String url = "http://192.168.1.5/kontak/hapus_data.php?id_kontak="+getIntent().getStringExtra("id_kontak");
+        String url = "http://172.125.1.179/kontak/hapus_data.php?id_kontak="+getIntent().getStringExtra("id_kontak");
         StringRequest request = new StringRequest(
                 Request.Method.GET,
                 url,
